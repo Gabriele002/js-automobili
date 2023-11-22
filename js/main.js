@@ -40,4 +40,35 @@ for (let i=0; i< auto.length; i++) {
             </div>  
     `
 }
+    document.getElementById("myBtn").addEventListener("click", addCar);
+function addCar(event) {
+    event.preventDefault();
 
+    let newMarca = document.getElementById("marca").value;
+    let newModello = document.getElementById("modello").value;
+    let newAlimentazione = document.getElementById("alimentazione").value;
+
+    let newCar = {
+        marca: newMarca,
+        modello: newModello,
+        alimentazione: newAlimentazione,
+    }
+
+    auto.push(newCar);
+    
+        for (let i=0; i< 1; i++) {
+        document.getElementById("main_auto").innerHTML += `
+            
+                <div class="col-4 border border-black p-2">             
+                    <h6 class=" mb-2 text-secondary">${newCar.marca}</h6>
+                </div>
+                <div class="col-4 border border-black p-2">   
+                    <h6 class=" mb-2 text-secondary">${newCar.modello}</h6>
+                </div>
+                <div class="col-4 border border-black p-2">     
+                    <h6 class="mb-2 text-secondary">${newCar.alimentazione}</h6>
+                </div>  
+        `
+    }
+    
+}
