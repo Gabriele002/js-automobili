@@ -1,15 +1,15 @@
 
 let auto = [
-    { marca: "fiat", modello: "utilitaria", alimentazione: "diesel" },
-    { marca: "bmw", modello: "sportiva", alimentazione: "benzina" },
-    { marca: "mercedes", modello: "sportiva", alimentazione: "benzina" },
-    { marca: "lancia", modello: "utilitaria", alimentazione: "eletrica" },
-    { marca: "fiat", modello: "utilitaria", alimentazione: "eletrica" },
-    { marca: "pegaut", modello: "utilitaria", alimentazione: "diesel" },
-    { marca: "fiat", modello: "utilitaria", alimentazione: "eletrica" },
-    { marca: "bugatti", modello: "corsa", alimentazione: "benzina" },
-    { marca: "ferrari", modello: "corsa", alimentazione: "eletrica" },
-    { marca: "pagani", modello: "corsa", alimentazione: "diesel" }
+    { marca: "Fiat", modello: "Utilitaria", alimentazione: "Diesel" },
+    { marca: "Bmw", modello: "Sportiva", alimentazione: "Benzina" },
+    { marca: "Mercedes", modello: "Sportiva", alimentazione: "Benzina" },
+    { marca: "Lancia", modello: "Utilitaria", alimentazione: "Eletrica" },
+    { marca: "Fiat", modello: "Utilitaria", alimentazione: "Eletrica" },
+    { marca: "Pegaut", modello: "Utilitaria", alimentazione: "Diesel" },
+    { marca: "Fiat", modello: "Utilitaria", alimentazione: "Eletrica" },
+    { marca: "Bugatti", modello: "Corsa", alimentazione: "Benzina" },
+    { marca: "Ferrari", modello: "Corsa", alimentazione: "Eletrica" },
+    { marca: "Pagani", modello: "Corsa", alimentazione: "Diesel" }
 ]
 
     let diesel = [];
@@ -25,6 +25,19 @@ auto.forEach(function (auto)  {
     }
 })
 
-console.log(diesel);
-console.log(benzina);
-console.log(eletrica);
+
+for (let i=0; i< auto.length; i++) {
+    document.getElementById("main_auto").innerHTML += `
+        
+            <div class="col-4 border border-black p-2">             
+                <h6 class=" mb-2 text-secondary">${auto[i].marca}</h6>
+            </div>
+            <div class="col-4 border border-black p-2">   
+                <h6 class=" mb-2 text-secondary">${auto[i].modello}</h6>
+            </div>
+            <div class="col-4 border border-black p-2">     
+                <h6 class="mb-2 text-secondary">${auto[i].alimentazione}</h6>
+            </div>  
+    `
+}
+
